@@ -7,11 +7,9 @@ namespace App\Models;
  */
 class Coach extends Person
 {
-    /**
-     * Coach status
-     *
-     * @var boolean
-     */
+
+  
+
     private $active;
 
     /**
