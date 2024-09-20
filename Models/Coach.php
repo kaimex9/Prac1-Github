@@ -3,71 +3,41 @@
 namespace App\Models;
 
 /**
- * Represents coach.
+ * Represents any person.
  */
-class Coach extends Person
+class Person
 {
-
+/**
+   * age of person
+   *
+   * @var int
+   */
+  private $age;
   
+  /**
+   * Get age of person
+   *
+   * @return  int
+   */ 
+  public function getAge()
+  {
+    return $this->age;
+  }
 
-    private $active;
-
-    /**
-     * Coach tactic
-     *
-     * @var string
-     */
-    private $tactic;
-
-    /**
-     * Construct a Coach with a name, the status, and a tactic.
-     *
-     * @param string $name     Coach name
-     * @param bool $active     Coach Status
-     * @param string $tactic   La nueva táctica a implementar
-     */
-    public function __construct(string $name, bool $active, string $tactic)
-    {
-        $this->setName($name); // Usa el método de la clase Person para establecer el nombre
-        $this->active = $active;
-        $this->tactic = $tactic;
+  /**
+   * Set age of person
+   *
+   * @param  int  $age  age of person
+   *
+   * @return  self
+   */ 
+  public function setAge(int $age)
+  {
+      $this->age = $age;
+      
+      return $this;
     }
-
-    /**
-     * Get Coach Status
-     *
-     * @return bool
-     */
-    public function getActive()
-    {
-        return $this->active;
-    }
-
-    /**
-     * Set Coach status
-     *
-     * @param bool $active Coach status
-     * @return self
-     */
-    public function setActive(bool $active)
-    {
-        $this->active = $active;
-        return $this;
-    }
-
-    public function getTactic()
-    {
-        return $this->tactic;
-    }
-
-    public function deviseTeamTactic(string $tactic): void
-    {
-        echo "{$this->getName()} says: Alright team, our new tactic for the next game will be '{$tactic}'!";
-    }
-
-    function train()
-    {
-        echo "{$this->getName()} says: Come on Team, let's go train!";
+    function run(){
+      echo "running";
     }
 }
-
