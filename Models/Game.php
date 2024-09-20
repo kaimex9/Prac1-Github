@@ -19,9 +19,8 @@ class Game
    * Team #1 vs. Team #2
    *
    * @var ArrayObject
-   */
+   */ 
   private $teams;
-
   
   /**
    * Get field where game is played
