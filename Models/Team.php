@@ -83,4 +83,4 @@ class Team
         echo "The game is starting with {$this->name} team.";
     }
 }
-echo "Me gustan las galletas";
+echo "Hello World xd";
