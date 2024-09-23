@@ -7,67 +7,37 @@ namespace App\Models;
  */
 class Person
 {
-    /**
-     * Name of the person
-     *
-     * @var string
-     */
-    private $name;
+/**
+   * age of person
+   *
+   * @var int
+   */
+  private $age;
+  
+  /**
+   * Get age of person
+   *
+   * @return  int
+   */ 
+  public function getAge()
+  {
+    return $this->age;
+  }
 
-    /**
-     * Age of the person
-     *
-     * @var int
-     */
-    private $age;
-
-    /**
-     * Get the name of the person
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->name;
+  /**
+   * Set age of person
+   *
+   * @param  int  $age  age of person
+   *
+   * @return  self
+   */ 
+  public function setAge(int $age)
+  {
+      $this->age = $age;
+      
+      return $this;
     }
-
-    /**
-     * Set the name of the person
-     *
-     * @param string $name Name of the person
-     * @return self
-     */
-    public function setName(string $name)
-    {
-        $this->name = $name;
-        return $this;
-    }
-
-    /**
-     * Get the age of the person
-     *
-     * @return int
-     */
-    public function getAge()
-    {
-        return $this->age;
-    }
-
-    /**
-     * Set the age of the person
-     *
-     * @param int $age Age of the person
-     * @return self
-     */
-    public function setAge(int $age)
-    {
-        $this->age = $age;
-        return $this;
-    }
-
-    function run()
-    {
-        echo "running";
+    function run(){
+      echo "running";
     }
 }
-
