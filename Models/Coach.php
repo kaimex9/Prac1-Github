@@ -1,5 +1,3 @@
-<?php
-
 namespace App\Models;
 
 /**
@@ -7,37 +5,35 @@ namespace App\Models;
  */
 class Person
 {
-/**
-   * age of person
-   *
-   * @var int
-   */
-  private $age;
-  
-  /**
-   * Get age of person
-   *
-   * @return  int
-   */ 
-  public function getAge()
-  {
-    return $this->age;
-  }
+    /**
+     * Name of the person
+     *
+     * @var string
+     */
+    private $name;
 
-  /**
-   * Set age of person
-   *
-   * @param  int  $age  age of person
-   *
-   * @return  self
-   */ 
-  public function setAge(int $age)
-  {
-      $this->age = $age;
-      
-      return $this;
-    }
-    function run(){
-      echo "running";
-    }
-}
+    /**
+     * Status of the person (active/inactive)
+     *
+     * @var boolean
+     */
+    private $active;
+
+    /**
+     * Tactic of the person (if coach)
+     *
+     * @var string
+     */
+    private $tactic;
+
+    /**
+     * Age of the person
+     *
+     * @var int
+     */
+    private $age;
+
+    /**
+     * Construct a Person with a name, status, age, and possibly a tactic.
+     *
+     * @param string $name   Name of the person
