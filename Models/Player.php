@@ -93,7 +93,7 @@ class Player extends Person
     }
 
     /**
-    Metodo para pasar la pelota
+    *Metodo para pasar la pelota
     */
     public function passBall()
     {
